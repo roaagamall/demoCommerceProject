@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: org.example.TestRunning.running
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 168.239 s <<< FAILURE! - in org.example.TestRunning.running
+org.example.TestRunning.running.runScenario  Time elapsed: 141.841 s  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+Could not start a new session. Response code 500. Message: chrome not reachable 
+Host info: host: 'DESKTOP-9NM8O65', ip: '192.168.1.8'
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_351'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]
+

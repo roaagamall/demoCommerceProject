@@ -1,0 +1,4 @@
+org\example\stepDefinition\RegistrationstepDef1.class
+org\example\Pages\P01_Registration.class
+org\example\TestRunning\running.class
+org\example\stepDefinition\Hooks.class
