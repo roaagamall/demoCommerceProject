@@ -6,9 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.Pages.P01_Registration;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 public class RegistrationstepDef1 {

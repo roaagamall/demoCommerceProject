@@ -19,11 +19,15 @@ public class P02_Login {
         return logPassword;
     }
     public WebElement logBUTTON(){
-        WebElement logBtn = Hooks.driver.findElement(By.cssSelector("button[type=\"submit\"]"));
+        WebElement logBtn = Hooks.driver.findElement(By.cssSelector("button[class=\"button-1 login-button\"]"));
         return logBtn;
     }
     public WebElement logText(){
         WebElement loginText = Hooks.driver.findElement(By.cssSelector("div[class=\"message-error validation-summary-errors\"]"));
         return loginText;
+    }
+    public WebElement accountBtn(){
+        WebElement accBTN =  Hooks.driver.findElement(By.cssSelector("a[class=\"ico-account\"]"));
+        return accBTN;
     }
 }

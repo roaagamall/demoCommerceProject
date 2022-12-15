@@ -3,13 +3,17 @@ package org.example.stepDefinition;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.example.Pages.P03_HomePage;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
 public class SliderStepDef {
+    P03_HomePage slider = new P03_HomePage();
     @When("user click on slider image")
-    public void slider1(){
-        Hooks.driver.findElement(By.xpath("//a[@href=\"http://demo.nopcommerce.com/\"]/img[@src=\"https://demo.nopcommerce.com/images/thumbs/0000079_banner_1.jpg\"]")).click();
+    public void slider1() throws InterruptedException{
+        Thread.sleep(4000);
+       slider.sliderImg().click();
+       System.out.println(slider.sliderImg().getText());
 
 
     }
@@ -21,8 +25,9 @@ public class SliderStepDef {
 
     }
     @When("user click on slider2 image")
-    public void slider2(){
-        Hooks.driver.findElement(By.xpath("//a[@href=\"http://demo.nopcommerce.com/\"]/img[@src=\"https://demo.nopcommerce.com/images/thumbs/0000080_banner_2.jpg\"]")).click();
+    public void slider2() throws InterruptedException{
+        Thread.sleep(4000);
+        slider.sliderImg1().click();
     }
     @Then("user go tO product page")
     public void urllassertion(){
