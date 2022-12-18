@@ -5,15 +5,22 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.Pages.P03_HomePage;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.time.Duration;
+
 public class SliderStepDef {
+    WebDriverWait  waiting = new WebDriverWait(Hooks.driver, Duration.ofMillis(8000));
+
     P03_HomePage slider = new P03_HomePage();
     @When("user click on slider image")
-    public void slider1() throws InterruptedException{
-        Thread.sleep(4000);
-       slider.sliderImg().click();
-       System.out.println(slider.sliderImg().getText());
+    public void slider1() {
+        waiting.until(ExpectedConditions.attributeToBe(slider.sliderImg(),"style","display: block;"));
+
+        slider.sliderImg().click();
+        System.out.println("done");
 
 
     }
@@ -26,7 +33,7 @@ public class SliderStepDef {
     }
     @When("user click on slider2 image")
     public void slider2() throws InterruptedException{
-        Thread.sleep(4000);
+        waiting.until(ExpectedConditions.attributeToBe(slider.sliderImg1(),"style","display: block;"));
         slider.sliderImg1().click();
     }
     @Then("user go tO product page")

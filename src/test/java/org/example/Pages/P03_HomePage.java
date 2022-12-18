@@ -7,11 +7,11 @@ import org.openqa.selenium.WebElement;
 public class P03_HomePage {
 
     public WebElement sliderImg(){
-     WebElement slider1 =   Hooks.driver.findElement(By.xpath("//a[@href=\"http://demo.nopcommerce.com/\"]/img[@src=\"https://demo.nopcommerce.com/images/thumbs/0000079_banner_1.jpg\"]"));
+     WebElement slider1 =   Hooks.driver.findElement(By.xpath("(//div[@id=\"nivo-slider\"]//a[@class=\"nivo-imageLink\"])[1]"));
      return slider1;
     }
     public WebElement sliderImg1(){
-        WebElement slider2 =Hooks.driver.findElement(By.xpath("//a[@href=\"http://demo.nopcommerce.com/\"]/img[@src=\"https://demo.nopcommerce.com/images/thumbs/0000080_banner_2.jpg\"]"));
+        WebElement slider2 =Hooks.driver.findElement(By.xpath("(//div[@id=\"nivo-slider\"]//a[@class=\"nivo-imageLink\"])[2]"));
                 return slider2;
     }
 
